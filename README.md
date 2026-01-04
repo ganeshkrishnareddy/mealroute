@@ -76,8 +76,10 @@ src/
 ### 👨‍💻 Developed By
 **P Ganesh Krishna Reddy**
 *Secure Software Engineer (Cybersecurity & Full-Stack)*
-- **LinkedIn**: [linkedin.com/in/ganeshkrishnareddy](https://linkedin.com/in/ganeshkrishnareddy)
-- **Portfolio**: [ganeshkrishnareddy.github.io](https://github.com/ganeshkrishnareddy)
+- **LinkedIn**: [linkedin.com/in/pganeshkrishnareddy](https://linkedin.com/in/pganeshkrishnareddy)
+- **Portfolio**: [pganeshreddy.netlify.app](https://pganeshreddy.netlify.app/)
+- **Email**: pganeshkrishnareddy@gmail.com
+- **Phone**: +91 8374622779
 
 ---
 

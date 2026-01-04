@@ -56,10 +56,11 @@ export default function Developer() {
                         <div>
                             <div style={{ color: 'var(--text-primary)', fontWeight: '600' }}>P Ganesh Krishna Reddy</div>
                             <div style={{ color: 'var(--text-secondary)', fontSize: '12px' }}>Secure Software Engineer</div>
+                            <div style={{ color: 'var(--accent-primary)', fontSize: '11px', marginTop: '4px' }}>pganeshkrishnareddy@gmail.com</div>
                         </div>
                     </div>
                     <p style={{ marginTop: '16px', fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
-                        Specializing in the intersection of scalable full-stack development and robust cybersecurity.
+                        Specializing in the intersection of scalable full-stack development and robust cybersecurity. Deployed with precision for high-impact operations.
                     </p>
                 </div>
             </div>
