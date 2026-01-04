@@ -1,5 +1,6 @@
 import { Users, TriangleAlert, Truck, Banknote } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DatabaseService } from '../services/db';
 import { differenceInDays, parseISO } from 'date-fns';
 
@@ -23,6 +24,7 @@ const StatCard = ({ title, value, icon: Icon, color, subtext }) => (
 );
 
 export default function DashboardHome() {
+  const navigate = useNavigate();
   const [stats, setStats] = useState({
     activeClients: 0,
     expiringSoon: 0,
@@ -101,15 +103,31 @@ export default function DashboardHome() {
       <div style={{ marginTop: '32px' }}>
         <h2 style={{ fontSize: '20px', marginBottom: '16px' }}>Quick Actions</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '40px' }}>
-          <button className="btn-secondary" style={{ width: '100%', padding: '12px' }}>+ New Client</button>
-          <button className="btn-secondary" style={{ width: '100%', padding: '12px' }}>Generate Tasks</button>
+          <button
+            className="btn-secondary"
+            style={{ width: '100%', padding: '12px', cursor: 'pointer' }}
+            onClick={() => navigate('/clients')}
+          >
+            + New Client
+          </button>
+          <button
+            className="btn-secondary"
+            style={{ width: '100%', padding: '12px', cursor: 'pointer' }}
+            onClick={() => navigate('/daily-tasks')}
+          >
+            Generate Tasks
+          </button>
         </div>
       </div>
 
       <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '40px 0' }} />
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-        <div className="glass-card" style={{ padding: '24px', border: '1px solid rgba(255, 153, 51, 0.2)' }}>
+        <div
+          className="glass-card hover-scale"
+          style={{ padding: '24px', border: '1px solid rgba(255, 153, 51, 0.2)', cursor: 'pointer', transition: 'transform 0.2s' }}
+          onClick={() => navigate('/developer')}
+        >
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '16px', color: 'var(--text-primary)' }}>Developer</h3>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-primary)', marginRight: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'white' }}>PG</div>
@@ -120,7 +138,11 @@ export default function DashboardHome() {
           </div>
         </div>
 
-        <div className="glass-card" style={{ padding: '24px', position: 'relative', overflow: 'hidden' }}>
+        <div
+          className="glass-card hover-scale"
+          style={{ padding: '24px', position: 'relative', overflow: 'hidden', cursor: 'pointer', transition: 'transform 0.2s' }}
+          onClick={() => navigate('/progvision')}
+        >
           <div style={{ position: 'absolute', top: 0, right: 0, padding: '8px 12px', background: 'var(--accent-primary)', color: 'white', fontSize: '10px', fontWeight: 'bold', borderBottomLeftRadius: '12px' }}>DEPLOYED BY PROGVISION</div>
           <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '16px', color: 'var(--text-primary)' }}>ProgVision</h3>
           <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>

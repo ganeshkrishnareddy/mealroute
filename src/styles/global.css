@@ -138,3 +138,22 @@ select option {
     background-color: #ffffff;
     color: #3e2723;
 }
+
+.hover-scale:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-primary) !important;
+}
+
+.btn-secondary {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 153, 51, 0.1);
+    border-color: var(--accent-primary);
+}

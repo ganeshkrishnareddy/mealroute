@@ -11,6 +11,7 @@ import Plans from './pages/Plans';
 import Finance from './pages/Finance';
 import Settings from './pages/Settings';
 import Developer from './pages/Developer';
+import ProgVision from './pages/ProgVision';
 import PrivateRoute from './components/PrivateRoute';
 import Layout from './components/Layout';
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/plans" element={<Layout><Plans /></Layout>} />
             <Route path="/settings" element={<Layout><Settings /></Layout>} />
             <Route path="/developer" element={<Layout><Developer /></Layout>} />
+            <Route path="/progvision" element={<Layout><ProgVision /></Layout>} />
           </Route>
         </Routes>
       </AuthProvider>
