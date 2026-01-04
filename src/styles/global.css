@@ -1,0 +1,140 @@
+:root {
+    /* Base - Dark Theme (Default) */
+    --bg-dark: #12100e;
+    /* Deep earthy brown/black */
+    --bg-card: rgba(40, 35, 30, 0.7);
+    --bg-card-hover: rgba(50, 45, 40, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #d0c0b0;
+    --accent-primary: #ff9933;
+    /* Saffron */
+    --accent-secondary: #c47f18;
+    /* Gold/Bronze */
+
+    --accent-success: #4caf50;
+    --accent-danger: #ef5350;
+    --accent-warning: #ffca28;
+
+    /* Glassmorphism */
+    --glass-border: 1px solid rgba(255, 153, 51, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    --glass-blur: blur(12px);
+
+    --input-bg: rgba(255, 255, 255, 0.07);
+    --input-border: rgba(255, 153, 51, 0.2);
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] {
+    --bg-dark: #fcfbf9;
+    /* Off-white/Cream */
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --bg-card-hover: rgba(255, 255, 255, 0.95);
+    --text-primary: #3e2723;
+    /* Dark Brown */
+    --text-secondary: #6d4c41;
+    /* Brownish Grey */
+    --accent-primary: #ff8f00;
+    /* Deep Saffron */
+    --accent-secondary: #795548;
+    /* Brown */
+
+    --glass-border: 1px solid rgba(121, 85, 72, 0.1);
+    --glass-shadow: 0 4px 16px rgba(62, 39, 35, 0.08);
+
+    --input-bg: rgba(0, 0, 0, 0.03);
+    --input-border: rgba(121, 85, 72, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glass Card Utility */
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Button Reset & Styles */
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: var(--transition-fast);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    /* Always white text on primary btn */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 153, 51, 0.4);
+}
+
+/* Input Styles */
+input,
+select,
+textarea {
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-primary);
+    padding: 10px 14px;
+    border-radius: 8px;
+    width: 100%;
+    font-family: inherit;
+    transition: var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    background: rgba(255, 153, 51, 0.1);
+}
+
+/* Dropdown Option Fix */
+select option {
+    background-color: #12100e;
+    color: #ffffff;
+}
+
+[data-theme='light'] select option {
+    background-color: #ffffff;
+    color: #3e2723;
+}
