@@ -113,7 +113,7 @@ export default function DashboardHome() {
           <button
             className="btn-secondary"
             style={{ width: '100%', padding: '12px', cursor: 'pointer' }}
-            onClick={() => navigate('/daily-tasks')}
+            onClick={() => navigate('/tasks')}
           >
             Generate Tasks
           </button>
