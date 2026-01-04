@@ -100,8 +100,32 @@ export default function DashboardHome() {
 
       <div style={{ marginTop: '32px' }}>
         <h2 style={{ fontSize: '20px', marginBottom: '16px' }}>Quick Actions</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-          {/* Quick action buttons can go here */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '40px' }}>
+          <button className="btn-secondary" style={{ width: '100%', padding: '12px' }}>+ New Client</button>
+          <button className="btn-secondary" style={{ width: '100%', padding: '12px' }}>Generate Tasks</button>
+        </div>
+      </div>
+
+      <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '40px 0' }} />
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+        <div className="glass-card" style={{ padding: '24px', border: '1px solid rgba(255, 153, 51, 0.2)' }}>
+          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '16px', color: 'var(--text-primary)' }}>Developer</h3>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--accent-primary)', marginRight: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'white' }}>PG</div>
+            <div>
+              <div style={{ fontWeight: '600', color: 'var(--text-primary)' }}>P Ganesh Krishna Reddy</div>
+              <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>pganeshkrishnareddy@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="glass-card" style={{ padding: '24px', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: 0, right: 0, padding: '8px 12px', background: 'var(--accent-primary)', color: 'white', fontSize: '10px', fontWeight: 'bold', borderBottomLeftRadius: '12px' }}>DEPLOYED BY PROGVISION</div>
+          <h3 style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '16px', color: 'var(--text-primary)' }}>ProgVision</h3>
+          <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+            ProgVision specializes in enterprise-grade application deployment and high-performance secure engineering solutions. Delivering precision at scale.
+          </p>
         </div>
       </div>
     </div>
