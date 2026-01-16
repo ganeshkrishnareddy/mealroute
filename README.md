@@ -77,7 +77,7 @@ src/
 **P Ganesh Krishna Reddy**
 *Secure Software Engineer (Cybersecurity & Full-Stack)*
 - **LinkedIn**: [linkedin.com/in/pganeshkrishnareddy](https://linkedin.com/in/pganeshkrishnareddy)
-- **Portfolio**: [pganeshreddy.netlify.app](https://pganeshreddy.netlify.app/)
+- **Portfolio**: [pganeshkrishnareddy.vercel.app](https://pganeshkrishnareddy.vercel.app/)
 - **Email**: pganeshkrishnareddy@gmail.com
 - **Phone**: +91 8374622779
 
